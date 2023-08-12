@@ -1,5 +1,7 @@
-# Tekwill
+# Tekwill Academy
 
-newreadme file in readme
+## Описание
 
-## Title 2
+## Как использовать этот проект
+
+## Полезные ссылки
