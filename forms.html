@@ -1,217 +1,201 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Forms</title>
-    <style>
-        body {
-          background: #60a072;
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-        }
-    
-        form {
-          max-width: 600px;
-          margin: 20px auto;
-          padding: 20px;
-          background-color: #ffffff;
-          border-radius: 10px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    
-        fieldset {
-          border: 1px solid #ccc;
-          padding: 15px;
-          margin-bottom: 20px;
-          border-radius: 5px;
-        }
-    
-        legend {
-          font-weight: bold;
-          color: #333;
-        }
-    
-        label {
-          margin-bottom: 5px;
-        }
-    
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        textarea,
-        input[type="file"],
-        input[type="url"],
-        input[type="range"] {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-        select{
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-    
-        input[type="radio"],
-        input[type="checkbox"] {
-          margin-right: 5px;
-        }
-    
-        label[for="explvlHTML"] {
-          display: inline-block;
-          margin-top: 10px;
-        }
+<head>
+  <title>Forms</title>
+  <style>
+    body {
+      background: #60a072;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        label[for="volumer"] {
-          display: block;
-          text-align: center;
-          margin-top: 10px;
-          font-weight: bold;
-        }
-    
-        #vol {
-          font-weight: bold;
-        }
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        input[type="color"] {
-          vertical-align: middle;
-        }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
 
-        #res{
-            background-color: #ffffff;
-            font-size: larger;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 20px;
-            display: inline;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-left: 160px;
-            
-        }
+    legend {
+      font-weight: bold;
+      color: #333;
+    }
 
-        #sub{
-            background-color: #ffffff;
-            font-size: larger;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 20px;
-            display: inline;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            
-        }
+    label {
+      margin-bottom: 5px;
+    }
 
-        .buttons-container {
-        display: flex;
-        justify-content: center; 
-        margin-top: 20px; }
-      </style>
-  </head>
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea,
+    select,
+    input[type="file"],
+    input[type="url"],
+    input[type="range"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    label[for="explvlHTML"],
+    label[for="volumer"] {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #vol {
+      font-weight: bold;
+    }
+
+    input[type="color"] {
+      vertical-align: middle;
+    }
+
+    #res,
+    #sub {
+      background-color: #ffffff;
+      font-size: larger;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      display: inline;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #res {
+      margin-left: 160px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 
   <body style="background: #60a072">
     <form id="myform">
       <fieldset id="1">
         <legend>Basic User Info</legend>
-        <label for="fulname">Full name:</label><br />
-        <input type="text" id="fulname" name="fulname"  placeholder="required" required/><br />
-        <label for="uemail">Email:</label><br />
-        <input type="email" id="uemail" name="uemail"  placeholder="required" required /><br />
-        <label for="upw">Password:</label><br />
-        <input type="password" id="upw" name="upw"  placeholder="required" required />
+        <label for="fulname">Full name:</label><br>
+        <input type="text" id="fulname" name="fulname"  placeholder="required" required><br>
+        <label for="uemail">Email:</label><br>
+        <input type="email" id="uemail" name="uemail"  placeholder="required" required><br>
+        <label for="upw">Password:</label><br>
+        <input type="password" id="upw" name="upw"  placeholder="required" required>
         <label for="upw">Confirm Password:</label>
-        <input type="password" id="upw" name="upw" /><br /><br />
+        <input type="password" id="upw" name="upw"><br><br>
         <label for="gender">Gender:</label>
-        <input type="radio" id="gender" name="gender" value="F" />
+        <input type="radio" id="gender" name="gender" value="F">
         <label for="html">Female</label>
-        <input type="radio" id="gender" name="gender" value="M" />
+        <input type="radio" id="gender" name="gender" value="M">
         <label for="html">Male</label>
-        <input type="radio" id="gender" name="gender" value="O" />
-        <label for="html">Other</label> <br /> <br />
-        <label for="dateobirth">Date of Birth:</label><br />
-        <input type="date" id="dateobirth" name="dateobirth" /><br />
+        <input type="radio" id="gender" name="gender" value="O">
+        <label for="html">Other</label> <br> <br>
+        <label for="dateobirth">Date of Birth:</label><br>
+        <input type="date" id="dateobirth" name="dateobirth"><br>
       </fieldset>
 
-      <br />
+      <br>
       <fieldset id="2">
         <legend>Address Information</legend>
-        <label for="County">County:</label><br />
+        <label for="County">County:</label><br>
         <select name="County" id="County">
           <option value="USA">USA</option>
           <option value="Moldova">Moldova</option>
           <option value="UK">UK</option>
           <option value="Irland">Irland</option>
-          <option value="Canada">Canada</option></select><br />
-        <label for="city">City:</label><br />
-        <input type="text" id="city" name="city" /><br />
-        <label for="Pcode">Postal Code:</label><br />
-        <input type="text" id="Pcode" name="Pcode" /><br />
-        <label for="message">Message:</label><br />
+          <option value="Canada">Canada</option></select><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="Pcode">Postal Code:</label><br>
+        <input type="text" id="Pcode" name="Pcode"><br>
+        <label for="message">Message:</label><br>
         <textarea name="message" id="message"></textarea>
       </fieldset>
 
-      <br />
+      <br>
       <fieldset id="3">
         <legend>Preference</legend>
         <label for="Prefcont">Prefered contact:</label>
-        <input type="checkbox" id="Prefcont" name="PrefEmail" value="PrefEmail"/>
+        <input type="checkbox" id="Prefcont" name="PrefEmail" value="PrefEmail">
         <label for="html">Email</label>
-        <input type="checkbox" id="Prefcont" name="PrefPhone" value="PrefPhone" />
+        <input type="checkbox" id="Prefcont" name="PrefPhone" value="PrefPhone">
         <label for="html">Phone</label>
-        <input type="checkbox" id="Prefcont" name="PrefPMail" value="PrefPMail"/>
-        <label for="html">Postal Mail</label> <br /> <br />
-        <label for="Favcolor">Favorite Color:</label><br />
-        <input type="color" id="Favcolor" name="Favcolor" /><br />
+        <input type="checkbox" id="Prefcont" name="PrefPMail" value="PrefPMail">
+        <label for="html">Postal Mail</label> <br> <br>
+        <label for="Favcolor">Favorite Color:</label><br>
+        <input type="color" id="Favcolor" name="Favcolor"><br>
       </fieldset>
 
       <br />
       <fieldset id="4">
         <legend>Aditional Details</legend>
-        <label for="hyfu">How did you hear about us:</label><br />
+        <label for="hyfu">How did you hear about us:</label><br>
         <select  name="hyfu" id="hyfu">
           <option value="Net">Internet</option>
           <option value="Friend">Friend</option>
           <option value="Advertisement">Advertisement</option>
-          <option value="Other">Other</option></select><br />
-        <label for="message">Coments:</label><br />
+          <option value="Other">Other</option></select><br>
+        <label for="message">Coments:</label><br>
         <textarea name="message" id="message"></textarea>
       </fieldset>
 
-      <br />
+      <br>
       <fieldset id="5">
         <legend>Profile</legend>
         <label for="File">Upload a profile file:</label>
-        <input type="file" id="File" name="File" accept="image/png, image/jpg" /><br />
+        <input type="file" id="File" name="File" accept="image/png, image/jpg"><br>
         <label for="webURL">Website URL</label>
-        <input type="url" id="webURL" name="webURL" /><br />
+        <input type="url" id="webURL" name="webURL"><br>
         <label for="explvlHTML">Experience Level with HTML:</label>
-        <span><input type="range" id="explvlHTML" name="explvlHTML"  min="0" max="10" />
-        <label for="volumer">Value: <span id="vol"></span> / 10</div></span></label>
+        <input type="range" id="explvlHTML" name="explvlHTML"  min="0" max="10">
+        <label for="volumer">Value: <span id="vol"> / 10</span></label>
       </fieldset>
     </form>
 
     <div class="buttons-container">
-    <input type="submit" id="sub" form="myform">
-    <input type="reset" id="res" form="myform"></div>
-
+      <input type="submit" id="sub" form="myform">
+      <input type="reset" id="res" form="myform">
+    </div>
+  
     <script>
-    var slider = document.getElementById("explvlHTML");
-        var output = document.getElementById("vol");
-        output.innerHTML = slider.value; 
-        slider.oninput = function() {
-        output.innerHTML = this.value;}
-
-    var resetButton = document.getElementById("res");
+      var slider = document.getElementById("explvlHTML");
+      var output = document.getElementById("vol");
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      };
+  
+      var resetButton = document.getElementById("res");
       resetButton.addEventListener("click", function() {
-      slider.value = 5; 
-      output.innerHTML = slider.value;});
+        slider.value = 5;
+        output.innerHTML = slider.value;
+      });
     </script>
   </body>
-</html>
+  </html>
