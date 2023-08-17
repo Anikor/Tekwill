@@ -1,10 +1,119 @@
 <html>
   <head>
     <title>Forms</title>
+    <style>
+        body {
+          background: #60a072;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+    
+        form {
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        fieldset {
+          border: 1px solid #ccc;
+          padding: 15px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+        }
+    
+        legend {
+          font-weight: bold;
+          color: #333;
+        }
+    
+        label {
+          margin-bottom: 5px;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea,
+        input[type="file"],
+        input[type="url"],
+        input[type="range"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+    
+        input[type="radio"],
+        input[type="checkbox"] {
+          margin-right: 5px;
+        }
+    
+        label[for="explvlHTML"] {
+          display: inline-block;
+          margin-top: 10px;
+        }
+
+        label[for="volumer"] {
+          display: block;
+          text-align: center;
+          margin-top: 10px;
+          font-weight: bold;
+        }
+    
+        #vol {
+          font-weight: bold;
+        }
+
+        input[type="color"] {
+          vertical-align: middle;
+        }
+
+        #res{
+            background-color: #ffffff;
+            font-size: larger;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-left: 160px;
+            
+        
+        }
+
+        #sub{
+            background-color: #ffffff;
+            font-size: larger;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .buttons-container {
+        display: flex;
+        justify-content: center; 
+        margin-top: 20px; }
+
+
+      </style>
   </head>
 
   <body style="background: #60a072">
-    <form>
+    <form id="myform">
       <fieldset id="1">
         <legend>Basic User Info</legend>
         <label for="fulname">Full name:</label><br />
@@ -14,14 +123,14 @@
         <label for="upw">Password:</label><br />
         <input type="password" id="upw" name="upw" />
         <label for="upw">Confirm Password:</label>
-        <input type="password" id="upw" name="upw" /><br />
-        <label for="gender">Gender:</label><br />
+        <input type="password" id="upw" name="upw" /><br /><br />
+        <label for="gender">Gender:</label>
         <input type="radio" id="gender" name="gender" value="F" />
         <label for="html">Female</label>
         <input type="radio" id="gender" name="gender" value="M" />
         <label for="html">Male</label>
         <input type="radio" id="gender" name="gender" value="O" />
-        <label for="html">Other</label> <br />
+        <label for="html">Other</label> <br /> <br />
         <label for="dateobirth">Date of Birth:</label><br />
         <input type="date" id="dateobirth" name="dateobirth" /><br />
       </fieldset>
@@ -52,27 +161,12 @@
       <fieldset id="3">
         <legend>Basic User Info</legend>
         <label for="Prefcont">Prefered contact:</label>
-        <input
-          type="checkbox"
-          id="Prefcont"
-          name="PrefEmail"
-          value="PrefEmail"
-        />
+        <input type="checkbox" id="Prefcont" name="PrefEmail" value="PrefEmail"/>
         <label for="html">Email</label>
-        <input
-          type="checkbox"
-          id="Prefcont"
-          name="PrefPhone"
-          value="PrefPhone"
-        />
+        <input type="checkbox" id="Prefcont" name="PrefPhone" value="PrefPhone" />
         <label for="html">Phone</label>
-        <input
-          type="checkbox"
-          id="Prefcont"
-          name="PrefPMail"
-          value="PrefPMail"
-        />
-        <label for="html">Postal Mail</label> <br />
+        <input type="checkbox" id="Prefcont" name="PrefPMail" value="PrefPMail"/>
+        <label for="html">Postal Mail</label> <br /> <br />
         <label for="Favcolor">Favorite Color:</label><br />
         <input type="color" id="Favcolor" name="Favcolor" /><br />
       </fieldset>
@@ -87,16 +181,25 @@
         <input type="url" id="webURL" name="webURL" /><br />
         <label for="explvlHTML">Experience Level with HTML:</label>
         <span><input type="range" id="explvlHTML" name="explvlHTML"  min="0" max="10" />
-        <label for="value">Value: <span id="vol"></span> / 10</div></span></label>
+        <label for="volumer">Value: <span id="vol"></span> / 10</div></span></label>
       </fieldset>
     </form>
-    
+
+    <div class="buttons-container">
+    <input type="submit" id="sub" form="myform">
+    <input type="reset" id="res" form="myform"></div>
+
     <script>
     var slider = document.getElementById("explvlHTML");
         var output = document.getElementById("vol");
         output.innerHTML = slider.value; 
         slider.oninput = function() {
           output.innerHTML = this.value;}
+    var resetButton = document.getElementById("res");
+    resetButton.addEventListener("click", function() {
+      slider.value = 5; 
+      output.innerHTML = slider.value;
+    });
     </script>
   </body>
 </html>
