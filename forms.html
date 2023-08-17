@@ -37,11 +37,18 @@
         input[type="text"],
         input[type="email"],
         input[type="password"],
-        select,
         textarea,
         input[type="file"],
         input[type="url"],
         input[type="range"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        select{
           width: 100%;
           padding: 8px;
           margin-bottom: 10px;
@@ -106,8 +113,6 @@
         display: flex;
         justify-content: center; 
         margin-top: 20px; }
-
-
       </style>
   </head>
 
@@ -116,11 +121,11 @@
       <fieldset id="1">
         <legend>Basic User Info</legend>
         <label for="fulname">Full name:</label><br />
-        <input type="text" id="fulname" name="fulname" /><br />
+        <input type="text" id="fulname" name="fulname"  placeholder="required" required/><br />
         <label for="uemail">Email:</label><br />
-        <input type="email" id="uemail" name="uemail" /><br />
+        <input type="email" id="uemail" name="uemail"  placeholder="required" required /><br />
         <label for="upw">Password:</label><br />
-        <input type="password" id="upw" name="upw" />
+        <input type="password" id="upw" name="upw"  placeholder="required" required />
         <label for="upw">Confirm Password:</label>
         <input type="password" id="upw" name="upw" /><br /><br />
         <label for="gender">Gender:</label>
@@ -135,7 +140,6 @@
       </fieldset>
 
       <br />
-
       <fieldset id="2">
         <legend>Address Information</legend>
         <label for="County">County:</label><br />
@@ -154,7 +158,6 @@
       </fieldset>
 
       <br />
-
       <fieldset id="3">
         <legend>Preference</legend>
         <label for="Prefcont">Prefered contact:</label>
@@ -185,7 +188,7 @@
       <fieldset id="5">
         <legend>Profile</legend>
         <label for="File">Upload a profile file:</label>
-        <input type="file" id="File" name="File" /><br />
+        <input type="file" id="File" name="File" accept="image/png, image/jpg" /><br />
         <label for="webURL">Website URL</label>
         <input type="url" id="webURL" name="webURL" /><br />
         <label for="explvlHTML">Experience Level with HTML:</label>
@@ -210,6 +213,5 @@
       slider.value = 5; 
       output.innerHTML = slider.value;});
     </script>
-
   </body>
 </html>
