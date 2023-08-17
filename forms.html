@@ -87,7 +87,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-left: 160px;
             
-        
         }
 
         #sub{
@@ -138,20 +137,18 @@
       <br />
 
       <fieldset id="2">
-        <legend>Basic User Info</legend>
+        <legend>Address Information</legend>
         <label for="County">County:</label><br />
-        <select name="cars" id="cars">
-          <option value="volvo">USA</option>
-          <option value="saab">Moldova</option>
-          <option value="mercedes">UK</option>
-          <option value="audi">Irland</option></select
-        ><br />
-
+        <select name="County" id="County">
+          <option value="USA">USA</option>
+          <option value="Moldova">Moldova</option>
+          <option value="UK">UK</option>
+          <option value="Irland">Irland</option>
+          <option value="Canada">Canada</option></select><br />
         <label for="city">City:</label><br />
         <input type="text" id="city" name="city" /><br />
         <label for="Pcode">Postal Code:</label><br />
         <input type="text" id="Pcode" name="Pcode" /><br />
-
         <label for="message">Message:</label><br />
         <textarea name="message" id="message"></textarea>
       </fieldset>
@@ -159,7 +156,7 @@
       <br />
 
       <fieldset id="3">
-        <legend>Basic User Info</legend>
+        <legend>Preference</legend>
         <label for="Prefcont">Prefered contact:</label>
         <input type="checkbox" id="Prefcont" name="PrefEmail" value="PrefEmail"/>
         <label for="html">Email</label>
@@ -172,9 +169,21 @@
       </fieldset>
 
       <br />
+      <fieldset id="4">
+        <legend>Aditional Details</legend>
+        <label for="hyfu">How did you hear about us:</label><br />
+        <select  name="hyfu" id="hyfu">
+          <option value="Net">Internet</option>
+          <option value="Friend">Friend</option>
+          <option value="Advertisement">Advertisement</option>
+          <option value="Other">Other</option></select><br />
+        <label for="message">Coments:</label><br />
+        <textarea name="message" id="message"></textarea>
+      </fieldset>
 
-      <fieldset id="3">
-        <legend>Basic User Info</legend>
+      <br />
+      <fieldset id="5">
+        <legend>Profile</legend>
         <label for="File">Upload a profile file:</label>
         <input type="file" id="File" name="File" /><br />
         <label for="webURL">Website URL</label>
@@ -194,12 +203,13 @@
         var output = document.getElementById("vol");
         output.innerHTML = slider.value; 
         slider.oninput = function() {
-          output.innerHTML = this.value;}
+        output.innerHTML = this.value;}
+
     var resetButton = document.getElementById("res");
-    resetButton.addEventListener("click", function() {
+      resetButton.addEventListener("click", function() {
       slider.value = 5; 
-      output.innerHTML = slider.value;
-    });
+      output.innerHTML = slider.value;});
     </script>
+
   </body>
 </html>
