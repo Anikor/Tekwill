@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forms</title>
+  <style>
+    body {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+      background: #60a072;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    fieldset:hover {
+      border-color: #3550ba;
+      transform: scale(1.05);
+    }
+
+    legend {
+      font-size: 20px;
+      font-weight: bolder;
+      color: #333;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    input[type="url"],
+    input[type="range"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    label[for="explvlHTML"] {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    label[for="volumer"] {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #vol {
+      font-weight: bold;
+    }
+
+    input[type="color"] {
+      vertical-align: middle;
+    }
+
+    #res,
+    #sub {
+      opacity: 0;
+      animation: fadeInButton 1s ease-in-out forwards;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      background-color: #ffffff;
+      font-size: larger;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      display: inline;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #sub:hover, #res:hover {
+      transform: scale(1.1);
+    }
+    #sub:hover {
+      transform: scale(1.1);
+      background-color: #294dda; 
+      color: white;
+    }
+
+    #res:hover {
+      transform: scale(1.1);
+      background-color: red;
+      color: white;
+    }
+
+    @keyframes fadeInButton {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .buttons-container {
+      opacity: 0;
+      animation: fadeInButton 1s ease-in-out forwards;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #profile label {
+      margin-bottom: 5px;
+    }
+
+    #profile input[type="file"],
+    #profile input[type="url"],
+    #profile input[type="range"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .range-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #experiencevalue {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    /*   textarea {
+      resize: none;
+    } */
+    </style>
+</head>
+
+<body>
+  <form id="myform">
+  
+    <fieldset id="basic-info">
+      <legend>Basic User Info</legend>
+      <label for="fulname">Full name:</label><br>
+      <input type="text" id="fulname" name="fulname" placeholder="required" required><br>
+      <label for="uemail">Email:</label><br>
+      <input type="email" id="uemail" name="uemail" placeholder="required" required><br>
+      <label for="upw">Password:</label><br>
+      <input type="password" id="upw" name="upw" placeholder="required" required><br>
+      <label for="confirmupw">Confirm Password:</label><br>
+      <input type="password" id="confirmupw" name="confirmupw"><br>
+      <label>Gender:</label><br>
+      <input type="radio" id="female" name="gender" value="f">
+      <label for="female">Female</label>
+      <input type="radio" id="male" name="gender" value="m">
+      <label for="male">Male</label>
+      <input type="radio" id="other" name="gender" value="o">
+      <label for="other">Other</label><br><br>
+      <label for="dateobirth">Date of Birth:</label><br>
+      <input type="date" id="dateobirth" name="dateobirth"><br>
+      </fieldset>
+
+      <br>
+      
+        <fieldset id="address-info">
+          <legend>Address Information</legend>
+          <label for="county">County:</label><br>
+          <select name="county" id="county">
+            <option value="usa">USA</option>
+            <option value="moldova">Moldova</option>
+            <option value="uk">UK</option>
+            <option value="irland">Irland</option>
+            <option value="canada">Canada</option>
+          </select><br>
+          <label for="city">City:</label><br>
+          <input type="text" id="city" name="city"><br>
+          <label for="pcode">Postal Code:</label><br>
+          <input type="number" id="pcode" name="pcode"><br>
+          <label for="message">Message:</label><br>
+          <textarea name="message" id="message"></textarea>
+        </fieldset>
+
+      <br>
+      
+        <fieldset id="preference">
+          <legend>Preference</legend>
+          <label>Prefered contact:</label>
+          <input type="checkbox" id="prefemail" name="prefemail" value="prefemail">
+          <label for="prefemail">Email</label>
+          <input type="checkbox" id="prefphone" name="prefphone" value="prefphone">
+          <label for="prefphone">Phone</label>
+          <input type="checkbox" id="prefposmail" name="prefposmail" value="prefposmail">
+          <label for="prefposmail">Postal Mail</label> <br> <br>
+          <label for="favcolor">Favorite Color:</label><br>
+          <input type="color" id="favcolor" name="favcolor"><br>
+        </fieldset>
+
+        <br>
+        
+        <fieldset id="detales">
+          <legend>Aditional Details</legend>
+          <label for="hyfu">How did you hear about us:</label><br>
+          <select  name="hyfu" id="hyfu">
+            <option value="net">Internet</option>
+            <option value="friend">Friend</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+          </select><br>
+          <label for="comments">Comments:</label><br>
+          <textarea name="comments" id="comments"></textarea>
+        </fieldset>
+
+        <br>
+
+          <fieldset id="profile">
+            <legend>Profile</legend>
+            <label for="profilefile">Upload a profile file (.jpg/.png):</label>
+            <input type="file" id="profilefile" name="profilefile" accept="image/png, image/jpg"><br>
+            <label for="weburl">Website URL</label>
+            <input type="url" id="weburl" name="weburl"><br>
+            <label for="explevelhtml">Experience Level with HTML:</label>
+            <div class="range-container">
+              <input type="range" id="explevelhtml" name="explevelhtml" min="0" max="10">
+              <label>Value: <span id="experiencevalue"></span> / 10</label>
+            </div>
+          </fieldset>
+          <div class="buttons-container">
+            <input type="submit" id="sub">
+            <input type="reset" id="res"></div>
+        </form>
+
+
+
+    <script>
+      var slider = document.getElementById("explevelhtml"); 
+      var output = document.getElementById("experiencevalue"); 
+      output.innerHTML = slider.value;
+      slider.oninput = function () {
+        output.innerHTML = this.value;
+      };
+    
+      var resetButton = document.getElementById("res");
+      resetButton.addEventListener("click", function () {
+        slider.value = 5;
+        output.innerHTML = slider.value;
+      });
+    </script> 
+</body>
+</html>
