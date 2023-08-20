@@ -160,7 +160,7 @@
       font-weight: bold;
     }
 
-    #experienceValue {
+    #experiencevalue {
       font-weight: bold;
       margin-top: 5px;
     }
@@ -181,14 +181,14 @@
       <input type="email" id="uemail" name="uemail" placeholder="required" required><br>
       <label for="upw">Password:</label><br>
       <input type="password" id="upw" name="upw" placeholder="required" required><br>
-      <label for="confirmUpw">Confirm Password:</label><br>
-      <input type="password" id="confirmUpw" name="confirmUpw"><br>
+      <label for="confirmupw">Confirm Password:</label><br>
+      <input type="password" id="confirmupw" name="confirmupw"><br>
       <label>Gender:</label><br>
-      <input type="radio" id="female" name="gender" value="F">
+      <input type="radio" id="female" name="gender" value="f">
       <label for="female">Female</label>
-      <input type="radio" id="male" name="gender" value="M">
+      <input type="radio" id="male" name="gender" value="m">
       <label for="male">Male</label>
-      <input type="radio" id="other" name="gender" value="O">
+      <input type="radio" id="other" name="gender" value="o">
       <label for="other">Other</label><br><br>
       <label for="dateobirth">Date of Birth:</label><br>
       <input type="date" id="dateobirth" name="dateobirth"><br>
@@ -198,18 +198,18 @@
       
         <fieldset id="address-info">
           <legend>Address Information</legend>
-          <label for="County">County:</label><br>
-          <select name="County" id="County">
-            <option value="USA">USA</option>
-            <option value="Moldova">Moldova</option>
-            <option value="UK">UK</option>
-            <option value="Irland">Irland</option>
-            <option value="Canada">Canada</option>
+          <label for="county">County:</label><br>
+          <select name="county" id="county">
+            <option value="usa">USA</option>
+            <option value="moldova">Moldova</option>
+            <option value="uk">UK</option>
+            <option value="irland">Irland</option>
+            <option value="canada">Canada</option>
           </select><br>
           <label for="city">City:</label><br>
           <input type="text" id="city" name="city"><br>
-          <label for="Pcode">Postal Code:</label><br>
-          <input type="number" id="Pcode" name="Pcode"><br>
+          <label for="pcode">Postal Code:</label><br>
+          <input type="number" id="pcode" name="pcode"><br>
           <label for="message">Message:</label><br>
           <textarea name="message" id="message"></textarea>
         </fieldset>
@@ -218,15 +218,15 @@
       
         <fieldset id="preference">
           <legend>Preference</legend>
-          <label for="PrefCont">Prefered contact:</label>
-          <input type="checkbox" id="PrefEmail" name="PrefEmail" value="PrefEmail">
-          <label for="PrefPhone">Email</label>
-          <input type="checkbox" id="PrefPhone" name="PrefPhone" value="PrefPhone">
-          <label for="PrefPMail">Phone</label>
-          <input type="checkbox" id="PrefPosMail" name="PrefPosMail" value="PrefPosMail">
-          <label for="html">Postal Mail</label> <br> <br>
-          <label for="Favcolor">Favorite Color:</label><br>
-          <input type="color" id="Favcolor" name="Favcolor"><br>
+          <label for="prefcontact">Prefered contact:</label>
+          <input type="checkbox" id="prefemail" name="prefemail" value="prefemail">
+          <label for="prefemail">Email</label>
+          <input type="checkbox" id="prefphone" name="prefphone" value="prefphone">
+          <label for="prefphone">Phone</label>
+          <input type="checkbox" id="prefposmail" name="prefposmail" value="prefposmail">
+          <label for="prefposmail">Postal Mail</label> <br> <br>
+          <label for="favcolor">Favorite Color:</label><br>
+          <input type="color" id="favcolor" name="favcolor"><br>
         </fieldset>
 
         <br>
@@ -235,10 +235,10 @@
           <legend>Aditional Details</legend>
           <label for="hyfu">How did you hear about us:</label><br>
           <select  name="hyfu" id="hyfu">
-            <option value="Net">Internet</option>
-            <option value="Friend">Friend</option>
-            <option value="Advertisement">Advertisement</option>
-            <option value="Other">Other</option>
+            <option value="net">Internet</option>
+            <option value="friend">Friend</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
           </select><br>
           <label for="comments">Comments:</label><br>
           <textarea name="comments" id="comments"></textarea>
@@ -248,14 +248,14 @@
 
           <fieldset id="profile">
             <legend>Profile</legend>
-            <label for="ProfileFile">Upload a profile file (.jpg/.png):</label>
-            <input type="file" id="ProfileFile" name="ProfileFile" accept="image/png, image/jpg"><br>
-            <label for="webURL">Website URL</label>
-            <input type="url" id="webURL" name="webURL"><br>
-            <label for="expLevelHTML">Experience Level with HTML:</label>
+            <label for="profilefile">Upload a profile file (.jpg/.png):</label>
+            <input type="file" id="profilefile" name="profilefile" accept="image/png, image/jpg"><br>
+            <label for="weburl">Website URL</label>
+            <input type="url" id="weburl" name="weburl"><br>
+            <label for="explevelhtml">Experience Level with HTML:</label>
             <div class="range-container">
-              <input type="range" id="expLevelHTML" name="expLevelHTML" min="0" max="10">
-              <label for="experienceValue">Value: <span id="experienceValue"></span> / 10</label>
+              <input type="range" id="explevelhtml" name="explevelhtml" min="0" max="10">
+              <label for="experiencevalue">Value: <span id="experiencevalue"></span> / 10</label>
             </div>
           </fieldset>
           <div class="buttons-container">
@@ -266,8 +266,8 @@
 
 
     <script>
-      var slider = document.getElementById("expLevelHTML"); 
-      var output = document.getElementById("experienceValue"); 
+      var slider = document.getElementById("explevelhtml"); 
+      var output = document.getElementById("experiencevalue"); 
       output.innerHTML = slider.value;
       slider.oninput = function () {
         output.innerHTML = this.value;
